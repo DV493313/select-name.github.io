@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+  <div class="container">
+      <label>First Name</label><input type="text" class="fname">
+      <label>last name</label><input type="text" class="lname">
+      <label>Mobile</label><input type="tel" class="number">
+ <button class="btn">click here</button>
+      <div class="outputbox">
+          <div class="col1">
+              <div class="head">First Name</div>
+              <div id="firstname"></div>
+          </div>
+          <div class="col2">
+            <div class="head">Last name</div>
+            <div id="lastname"></div>
+          </div>
+          <div class="col3">
+            <div class="head">Mobile</div>
+            <div id="mobile"></div>
+          </div>
+
+          
+      </div>
+  </div>
+  <script>
+      $(document).ready(function(){
+          $(".btn").click(function(){
+          var fnam=$(".fname").val();
+          var lnam=$(".lname").val();
+          var number=$(".number").val();
+        //   $('.outputbox').html(fnam + lnam + number);
+         $('#firstname').html(fnam);
+         $('#lastname').html(lnam);
+         $('#mobile').html(number);
+      
+          });
+        
+      });
+  </script>
+</body>
+</html>
